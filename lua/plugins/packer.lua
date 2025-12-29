@@ -66,4 +66,17 @@ return require('packer').startup(function(use)
 	})
 	-- Optional: Snippet collections
 	use('rafamadriz/friendly-snippets')
+
+    use({"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end})
+
+    use({
+        'echasnovski/mini.nvim',
+        config = function()
+            -- You only need to setup the 'pairs' module
+            require('mini.pairs').setup({})
+            -- You can add other 'mini.nvim' modules here too
+        end
+    })
 end)
